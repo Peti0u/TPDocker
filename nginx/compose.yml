@@ -8,9 +8,10 @@ services:
         - "5000:5000"
         - "5001:5001"
       depends_on:
-        - django-main
-        - rocket-ecommerce
-        - db
+        rocket-ecommerce:
+          condition: service_healthy
+        db:
+          condition: service_healthy
 
       networks:
         - app_net
