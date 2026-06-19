@@ -1,0 +1,13 @@
+services:
+  nginx:
+      container_name: nginx
+      build: "."
+      restart: always
+      ports:
+        - "5000:5000"
+        - "5001:5001"
+      depends_on:
+        - django-main
+        - rocket-ecommerce
+      healthcheck:
+        test: "wget http://192.168.32.131 || exit 1"

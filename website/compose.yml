@@ -1,0 +1,7 @@
+services:
+  website:
+    container_name: website
+    build: .
+    restart: always
+    ports:
+      - "80:80"

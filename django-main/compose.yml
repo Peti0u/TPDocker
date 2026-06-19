@@ -1,0 +1,5 @@
+services:
+  django-main:
+    container_name: django-main
+    build: .
+    restart: always

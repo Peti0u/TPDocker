@@ -1,0 +1,7 @@
+services:
+  django-soft:
+    container_name: django-soft
+    build: .
+    restart: always
+    ports:
+      - "5005:5005"

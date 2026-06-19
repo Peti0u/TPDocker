@@ -1,0 +1,7 @@
+include:
+  - ./django-main/compose.yml
+  - ./django-soft/compose.yml
+  - ./nginx/compose.yml
+  - ./rocket-ecommerce/compose.yml
+  - ./website/compose.yml
+
