@@ -1,0 +1,65 @@
+  402  docker system prune -af
+  403  sudo apt update && apt upgrade
+  404  cd
+  405  cd /home/mathis/TP
+  406  git clone https://github.com/Peti0u/TPDocker.git TPFinal
+  407  git login
+  408  gh auth login
+  409  git --v
+  410  git --version
+  411  ssh-keygen -t ed25519 -C "mathisborkowska@gmail.com"
+  412  cat ~/.ssh/id_ed25519.pub
+  413  git clone https://github.com/Peti0u/TPDocker.git TPFinal
+  414  ssh -T git@github.com
+  415  git clone https://github.com/Peti0u/TPDocker.git TPFinal
+  416  cd /home/mathis/TP/TPFinal/netdata
+  417  docker up -d --build
+  418  docker compose up -d --build
+  419  cd /home/mathis/TP/TPFinal
+  420  git pull
+  421  docker compose up -d --build
+  422  docker network create app_net
+  423  docker compose up -d --build
+  424  sudo apt update
+  425  sudo apt install -y apache2-utils
+  426  ab -n 10000 -c 500 192.168.1.32:5001
+  427  ab -n 10000 -c 500 http://192.168.1.32:5001/
+  428  docker logs rocket-ecommerce-BV-19-06-2026
+  429  git status
+  430  git pull
+  431  docker compose down
+  432  docker compose up -d --build
+  433  docker compose exec rocket-ecommerce python manage.py migrate
+  434  ab -n 100000 -c 10000 192.168.1.32:5001
+  435  ab -n 100000 -c 100000 http://192.168.1.32:5001/
+  436  docker ps
+  437  docker compose down
+  438  docker compose up -d
+  439  docker login
+  440  docker compose up -d
+  441  docker login
+  442  docker compose up -d
+  443  docker login
+  444  docker compose up -d
+  445  docker ps
+  446  docker compose up -d
+  447  docker images
+  448  docker prune image -f
+  449  docker prune image 
+  450  docker images prune
+  451  docker image prune
+  452  docker image prune -f
+  453  docker images
+  454  docker image prune -a -f
+  455  docker images
+  456  docker compose down
+  457  docker image prune -a -f
+  458  docker images
+  459  docker compose up -d
+  460  docker ps
+  461  git add .
+  462  git commit -m "pull des immage vers docker hub"
+  463  git push
+  464  git pull
+  465  git merge
+  466  history > history-projet-BORKOWKSA-MATHIS.log
