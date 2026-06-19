@@ -19,6 +19,14 @@ services:
       - /sys:/host/sys:ro
       - /etc/os-release:/host/etc/os-release:ro
       - /var/run/docker.sock:/var/run/docker.sock:ro
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:19999"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+    depends_on:
+      rocket-ecommerce-BV-19-06-2026:
+        condition: service_healthy
 
 volumes:
   netdataconfig:

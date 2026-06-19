@@ -3,3 +3,11 @@ services:
     container_name: rocket-ecommerce
     build: .
     restart: always
+  healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5001"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+    depends_on:
+      rocket-ecommerce-BV-19-06-2026:
+        condition: service_healthy
