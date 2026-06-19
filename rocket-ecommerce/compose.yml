@@ -1,11 +1,7 @@
 services:
   rocket-ecommerce:
     container_name: rocket-ecommerce-BV-19-06-2026
-    build: 
-      context: .
-      args:
-        - DB_ENGINE=sqlite3
-    image: rocket-ecommerce-bv-19-06-2026
+    image: peti0u/final-tp:rocket-ecommerce-bv-19-06-2026
     restart: always
     env_file:
       - .env

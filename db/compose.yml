@@ -1,6 +1,6 @@
 services:
   db:
-    image: mysql:8.0
+    image: peti0u/final-tp:mysql-bv-19-06-2026
     container_name: db-BV-19-06-2026
     restart: always
     environment:

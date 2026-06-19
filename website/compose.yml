@@ -1,8 +1,7 @@
 services:
   website:
     container_name: website-BV-19-06-2026
-    build: .
-    image: website-bv-19-06-2026
+    image: peti0u/final-tp:website-bv-19-06-2026
     restart: always
     ports:
       - "80:80"

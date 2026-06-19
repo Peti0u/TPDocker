@@ -1,8 +1,7 @@
 services:
   django-main:
     container_name: django-main-BV-19-06-2026
-    build: .
-    image: django-main-bv-19-06-2026
+    image: peti0u/final-tp:django-main-bv-19-06-2026
     restart: always
     networks:
       - app_net

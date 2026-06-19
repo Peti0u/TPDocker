@@ -1,6 +1,6 @@
 services:
   netdata:
-    image: netdata/netdata:stable
+    image: peti0u/final-tp:netdata-bv-19-06-2026
     container_name: netdata_monitoring
     restart: always
     ports:
