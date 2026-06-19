@@ -1,0 +1,217 @@
+  442  sudo apt update
+  443  sudo apt upgrade
+  444  git clone https://github.com/Peti0u/TPDocker.git
+  445  cd TPDocker/
+  446  git add .
+  447  git commit -m "Applications & Static Website"
+  448  git config --global user.email "Vous@exemple.com"
+  449  git config --global user.email "quent1.vibrac@mail.com"
+  450  git config --global user.name "Peti0u"
+  451  git commit -m "Applications & Static Website"
+  452  git config --global user.name "Quent1"
+  453  git push
+  454  sudo docker compose up
+  455  sudo docker compose up -d
+  456  sudo docker ps
+  457  sudo docker logs nginx
+  458  sudo docker compose up -d
+  459  sudo docker logs nginx
+  460  sudo docker compose up -d
+  461  sudo docker logs nginx
+  462  sudo docker compose up -d --build
+  463  sudo docker logs nginx
+  464  sudo docker compose up -d --build
+  465  sudo docker logs nginx
+  466  sudo docker system prune -a --volumes -f
+  467  sudo docker ps
+  468  sudo docker images
+  469  sudo docker compose up -d --build
+  470  sudo docker logs nginx
+  471  sudo docker compose up -d --build
+  472  sudo docker logs django-soft
+  473  sudo docker compose up -d --build
+  474  sudo docker logs django-soft
+  475  sudo docker compose up -d --build
+  476  sudo docker compose down
+  477  sudo docker compose up -d --build
+  478  sudo docker logs nginx
+  479  sudo docker ps
+  480  sudo docker images
+  481  sudo docker compose up -d --build
+  482  git add .
+  483  git commit -m "fix: compose.yml"
+  484  git push
+  485  sudo docker compose up -d --build
+  486  sudo docker images
+  487  sudo docker compose up -d --build
+  488  sudo docker images
+  489  sudo docker rmi nginx:mainline-alpine-slim    
+  490  sudo docker rmi rocket-ecommerce-bv-19-06-2026:latest
+  491  sudo docker rmi rocket-ecommerce-bv-19-06-2026:latest -f
+  492  sudo docker rmi tpdocker-django-main:latest -f
+  493  sudo docker rmi tpdocker-nginx:latest -f
+  494  sudo docker rmi tpdocker-rocket-ecommerce:latest -f
+  495  sudo docker rmi tpdocker-website:latest  -f
+  496  sudo docker images
+  497  sudo docker rmi tpdocker-django-soft:latest -f
+  498  sudo docker compose up -d --build
+  499  sudo docker images
+  500  git add .
+  501  git commit -m "update: images names"
+  502  git stash
+  503  git push
+  504  git pull
+  505  git stash pop
+  506  git merge
+  507  git status
+  508  git push
+  509  sudo docker images
+  510  sudo docker compose up -d --build
+  511  sudo docker images
+  512  git pull
+  513  git puul
+  514  git pull
+  515  sudo docker compose up -d --build
+  516  history >
+  517  history-projet-NOM-PRÉNOM.log
+  518  history > history-projet-NOM-PRÉNOM.log
+  519  sudo docker images
+  520  sudo docker ps
+  521  sudo docker compose up -d
+  522  sudo docker compose up -d --build
+  523  sudo docker compose ps
+  524  sudo docker ps
+  525  cd rocket-ecommerce/
+  526  sudo docker compose up -d --build
+  527  $ source env/bin/activate
+  528  source env/bin/activate
+  529  virtualenv env
+  530  pip install -r requirements.txt
+  531  python manage.py makemigrations
+  532  sudo docker compose exec python manage.py makemigrations
+  533  sudo docker compose exec rocket-ecommerce python manage.py makemigrations
+  534  sudo docker compose up -d --build
+  535  cd ../
+  536  sudo docker compose up -d --build
+  537  sudo docker ps
+  538  sudo docker rm 0d6375a4ea0e61c4fd1cd5e7ccc23ba838e4f9af3cb49e721e03fef751b30b00
+  539  sudo docker ps
+  540  sudo docker compose up -d --build
+  541  sudo docker rm d810b86bf4eb7d448e5a658c2ded8d3f828d6bf093b8cc925af48b496ebeaa55
+  542  sudo docker compose up -d --build
+  543  sudo docker compose up -d
+  544  sudo docker compose logs rocket-ecommerce
+  545  sudo docker exec -it db-BV-19-06-2026 mysql -u wearo -pWearo Wearo
+  546  sudo docker exec -it db-BV-19-06-2026 mysql -u wearo -p2026 Wearo
+  547  sudo docker compose exec rocket-ecommerce python manage.py makemigrations
+  548  sudo docker compose exec rocket-ecommerce python manage.py migrate
+  549  sudo docker exec -it db-BV-19-06-2026 mysql -u wearo -p2026 Wearo
+  550  sudo docker compose exec rocket-ecommerce python manage.py migrate --run-syncdb
+  551  sudo docker exec -it db-BV-19-06-2026 mysql -u wearo -p2026 Wearo
+  552  sudo docker compose exec rocket-ecommerce python manage.py shell -c "from django.conf import settings; print(settings.DATABASES['default'])"
+  553  sudo docker compose up -d
+  554  sudo docker compose exec rocket-ecommerce python manage.py migrate
+  555  sudo docker ps
+  556  sudo docker logs rocket-ecommerce
+  557  sudo docker logs rocket-ecommerce-bv-19-06-2026
+  558  sudo docker compose up -d --build
+  559  sudo docker compose exec rocket-ecommerce python manage.py migrate
+  560  sudo docker exec -it db-BV-19-06-2026 mysql -u wearo -p2026 Wearo
+  561  sudo docker compose up -d --build
+  562  sed -i 's/DB_ENGINE=mysql/DB_ENGINE=sqlite/g' .env
+  563  sudo docker compose up -d --build
+  564  sudo docker compose build --no-cache rocket-ecommerce
+  565  DB_ENGINE=sqlite sudo -E docker compose build --no-cache rocket-ecommerce
+  566  sudo docker compose up -d --build
+  567  sudo docker compose exec rocket-ecommerce python manage.py migrate --run-syncdb
+  568  sudo docker compose up -d --build
+  569  sudo docker exec -it db-BV-19-06-2026 mysql -u wearo -p2026 Wearo
+  570  sudo docker compose exec rocket-ecommerce python manage.py migrate
+  571  sudo docker compose up -d --build
+  572  sudo docker exec -it db-BV-19-06-2026 mysql -u wearo -p2026 Wearo
+  573  sudo docker compose exec rocket-ecommerce python manage.py migrate
+  574  sudo docker compose up -d --build
+  575  sudo docker compose exec rocket-ecommerce python manage.py migrate
+  576  sudo docker network create app_net
+  577  sudo docker compose up -d --build
+  578  sudo docker compose exec rocket-ecommerce python manage.py migrate
+  579  sudo docker exec -it db-BV-19-06-2026 mysql -u wearo -p2026 Wearo
+  580  sudo docker compose up -d --build
+  581  git add .
+  582  git commit "fix: db network"
+  583  git commit -m "fix: db network"
+  584  git push
+  585  sudo docker ps
+  586  sudo docker logss rocket-ecommerce-BV-19-06-2026
+  587  sudo docker logs rocket-ecommerce-BV-19-06-2026
+  588  sudo docker compose up -d --build
+  589  sudo docker ps
+  590  sudo docker logs nginx
+  591  sudo docker logs nginx-BV-19-06-2026
+  592  sudo docker compose up -d --build
+  593  git add .
+  594  git commit -m "fix: django-main network"
+  595  git push
+  596  sudo docker compose exec rocket-ecommerce python manage.py createsuperuser
+  597  sudo docker compose up -d --build
+  598  sudo docker ps
+  599  sudo docker compose up -d --build
+  600  sudo docker ps
+  601  sudo docker tag nginx-BV-19-06-2026 peti0u/final-tp:nginx-BV-19-06-2026
+  602  sudo docker tag nginx-BV-19-06-2026 peti0u/final-tp:nginx-bv-19-06-2026
+  603  sudo docker tag nginx-bv-19-06-2026 peti0u/final-tp:nginx-bv-19-06-2026
+  604  sudo docker tag rocket-ecommerce-bv-19-06-2026 peti0u/final-tp:rocket-ecommerce-bv-19-06-2026
+  605  sudo docker tag django-soft-bv-19-06-2026 peti0u/final-tp:django-soft-bv-19-06-2026
+  606  sudo docker tag django-main-bv-19-06-2026 peti0u/final-tp:django-main-bv-19-06-2026
+  607  sudo docker tag website-bv-19-06-2026 peti0u/final-tp:website-bv-19-06-2026
+  608  sudo docker tag mysql-bv-19-06-2026 peti0u/final-tp:mysql-bv-19-06-2026
+  609  sudo docker tag mysql:8.0 peti0u/final-tp:mysql-bv-19-06-2026
+  610  sudo docker tag netdata/netdata:stable peti0u/final-tp:netdata-bv-19-06-2026
+  611  sudo docker push peti0u/final-tp
+  612  sudo docker push peti0u/final-tp:nginx-bv-19-06-2026
+  613  sudo docker push peti0u/final-tp:mysql-bv-19-06-2026
+  614  sudo docker push peti0u/final-tp:django-main-bv-19-06-2026
+  615  sudo docker push peti0u/final-tp:django-soft-bv-19-06-2026
+  616  sudo docker push peti0u/final-tp:rocket-ecommerce-bv-19-06-2026
+  617  sudo docker push peti0u/final-tp:netdata-bv-19-06-2026
+  618  sudo docker tag website-bv-19-06-2026 peti0u/final-tp:website-bv-19-06-2026
+  619  sudo docker push peti0u/final-tp:website-bv-19-06-2026
+  620  sudo docker compose up -d --build
+  621  sudo docker exec -it db-BV-19-06-2026 mysql -u wearo -p2026 Wearo
+  622  sudo docker ps
+  623  sudo docker compose up -d --build
+  624  sudo docker ps
+  625  sudo docker compose up -d --build
+  626  sudo docker ps
+  627  sudo docker compose up -d --build
+  628  sudo docker compose up -d 
+  629  sudo docker compose up -d --build
+  630  sudo docker compose up -d 
+  631  sudo docker ps
+  632  sudo docker compose up -d 
+  633  sudo docker ps
+  634  sudo docker logs django-main-BV-19-06-2026
+  635  sudo docker ps
+  636  sudo docker compose up -d 
+  637  sudo docker ps
+  638  sudo docker compose up -d 
+  639  sudo docker ps
+  640  sudo docker tag nginx-bv-19-06-2026 peti0u/final-tp:nginx-bv-19-06-2026
+  641  sudo docker tag website-bv-19-06-2026 peti0u/final-tp:website-bv-19-06-2026
+  642  sudo docker tag rocket-ecommerce-bv-19-06-2026 peti0u/final-tp:rocket-ecommerce-bv-19-06-2026
+  643  sudo docker tag django-soft-bv-19-06-2026 peti0u/final-tp:django-soft-bv-19-06-2026
+  644  sudo docker tag django-main-bv-19-06-2026 peti0u/final-tp:django-main-bv-19-06-2026
+  645  sudo docker tag netdata/netdata:stable peti0u/final-tp:netdata-bv-19-06-2026
+  646  sudo docker tag mysql:8.0 peti0u/final-tp:mysql-bv-19-06-2026
+  647  sudo docker push peti0u/final-tp:nginx-bv-19-06-2026
+  648  sudo docker push peti0u/final-tp:website-bv-19-06-2026
+  649  sudo docker push peti0u/final-tp:rocket-ecommerce-bv-19-06-2026
+  650  sudo docker tag netdata/netdata:stable peti0u/final-tp:netdata-bv-19-06-2026
+  651  sudo docker push peti0u/final-tp:mysql-bv-19-06-2026
+  652  sudo docker push peti0u/final-tp:netdata-bv-19-06-2026
+  653  sudo docker push peti0u/final-tp:django-main-bv-19-06-2026
+  654  sudo docker push peti0u/final-tp:django-soft-bv-19-06-2026
+  655  git add .
+  656  git commit -m "update: healthcheck"
+  657  git push
+  658  history > history-projet-VIBRAC-Quentin.log
