@@ -1,0 +1,5 @@
+services:
+  rocket-ecommerce:
+    container_name: rocket-ecommerce
+    build: .
+    restart: always

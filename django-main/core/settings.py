@@ -22,7 +22,7 @@ SECRET_KEY = "django-insecure-b+$5wugqo%4&wt1+^jy+6x+#p3z*f__c__7(j9-4qp@24nl65n
 DEBUG = True
 
 # Hosts Settings
-ALLOWED_HOSTS = ["localhost", "127.0.0.1", ".onrender.com", "0.0.0.0", ".onrender.com"]
+ALLOWED_HOSTS = ["*"]
 CSRF_TRUSTED_ORIGINS = [
     "http://localhost:8000",
     "http://localhost:5085",
