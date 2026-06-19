@@ -1,0 +1,49 @@
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+
+var options = {
+        series: [{
+            name: "{{ chart_js_label }}",
+            data: {{ chart_js_y|safe }},
+        }],
+        chart: {
+          height: 350,
+          type: 'line',
+          zoom: {
+            enabled: false
+          }
+        },
+        title: {
+          text: '{{ chart.description|safe }}',
+          align: 'left',
+          margin: 10,
+          offsetX: 0,
+          offsetY: 0,
+          floating: false,
+          style: {
+            fontSize: '24px',
+            color: '#BADA55'
+          },
+        },        
+        dataLabels: {
+          enabled: false
+        },
+        stroke: {
+          curve: 'straight'
+        },
+        grid: {
+          row: {
+            colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
+            opacity: 0.5
+          },
+        },
+        xaxis: {
+          categories: {{ chart_js_x|safe }},
+        }
+        };
+
+        var chart = new ApexCharts(document.querySelector("#chart"), options);
+        chart.render();
+
+    });
+  </script>

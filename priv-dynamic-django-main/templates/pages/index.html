@@ -1,0 +1,87 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+
+{% block title %} HOME {% endblock title %} 
+
+{% block content %}
+  <!-- [ Main Content ] start -->
+  <div class="pc-container">
+    <div class="pc-content">
+
+        <!-- [ breadcrumb ] start -->
+        <div class="page-header">
+            <div class="page-block">
+                <div class="row align-items-center">
+                    <div class="col-md-12">
+                        <div class="page-header-title">
+                            <h5 class="m-b-10">
+                                <a href="/">Home</a>
+                            </h5>
+                        </div>
+                        <ul class="breadcrumb">
+                            <li class="breadcrumb-item">
+                                <a href="/">Dynamic Django</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- [ breadcrumb ] end -->
+
+      <!-- [ Main Content ] start -->
+      <div class="row">
+
+        <div class="col-sm-12">
+          <div class="card">
+            <div class="card-header">
+              <h5>Product Features</h5>
+              <p>
+                The product aims to help developers to speed up their data processing and consolidation work by corporate-grate tools and dynamic programming applied in Python/Django.  
+              </p>
+            </div>
+            <div class="card-body">
+              <ul>
+                <li>
+                  <a class="text-primary" href="{% url 'dynamic_dt' %}">Dynamic DataTables</a> 
+                  - Read the <a class="text-secondary" target="_blank" href="https://app-generator.dev/docs/developer-tools/dynamic-django/datatables.html">DOCS</a>
+                </li>
+                <li>
+                  <a class="text-primary" href="{% url 'dynamic_charts' %}">Dynamic Charts</a>
+                  - Read the <a class="text-secondary" target="_blank" href="https://app-generator.dev/docs/developer-tools/dynamic-django/charts.html">DOCS</a>
+                </li>
+                <li>
+                  <a class="text-primary" href="{% url 'dynamic_api' %}">Dynamic API</a>
+                  - Read the <a class="text-secondary" target="_blank" href="https://app-generator.dev/docs/developer-tools/dynamic-django/api.html">DOCS</a>
+                </li>
+                <li><strong>CSV Loader and Processor</strong>
+                  - Read the <a class="text-secondary" target="_blank" href="https://app-generator.dev/docs/developer-tools/dynamic-django/csv-loader.html">DOCS</a>
+                </li>
+                <li><strong>Powerfull CLI Tools</strong>
+                  - Read the <a class="text-secondary" target="_blank" href="https://app-generator.dev/docs/developer-tools/dynamic-django/cli.html">DOCS</a>
+                </li>
+              </ul>
+            </div>          
+          </div>
+        </div>  
+
+      </div>
+
+      <div class="row">
+
+        <div class="container text-center my-2 ratio ratio-16x9">
+        
+          <iframe src="https://www.youtube.com/embed/0y8qsAT7X9Q?rel=0"
+              allowfullscreen>
+          </iframe>
+
+        </div>
+
+      </div>
+
+      <!-- [ Main Content ] end -->
+    </div>
+  </div>
+  <!-- [ Main Content ] end -->
+{% endblock content %}
+    

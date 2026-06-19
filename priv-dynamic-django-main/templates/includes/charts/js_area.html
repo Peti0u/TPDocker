@@ -1,0 +1,46 @@
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+
+    var options = {
+      chart: {
+        height: 350,
+        type: 'area',
+      },
+      title: {
+        text: '{{ chart.description|safe }}',
+        align: 'left',
+        margin: 10,
+        offsetX: 0,
+        offsetY: 0,
+        floating: false,
+        style: {
+          fontSize: '24px',
+          color: '#BADA55'
+        },
+      },
+      dataLabels: {
+        enabled: false
+      },
+      stroke: {
+        curve: 'smooth'
+      },
+      series: [{
+        name: 'chart.prop1_label',
+        data: {{ chart.prop2_values | safe }}
+  }],
+    xaxis: {
+    categories: {{ chart.prop1_values | safe }},
+      },
+    tooltip: {
+    enabled: true,
+    shared: false,
+    fillSeriesColor: true
+  }
+    }
+
+  var chart = new ApexCharts(document.querySelector("#chart"), options);
+  chart.render();
+
+  });
+
+</script>

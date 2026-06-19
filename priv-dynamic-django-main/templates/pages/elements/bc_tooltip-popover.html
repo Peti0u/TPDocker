@@ -1,0 +1,80 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+
+{% block title %} Tooltips and Popover {% endblock title %}
+
+{% block content %}
+
+
+
+  <!-- [ Main Content ] start -->
+  <div class="pc-container">
+    <div class="pc-content">
+      <!-- [ breadcrumb ] start -->
+      <div class="page-header">
+        <div class="page-block">
+          <div class="row align-items-center">
+            <div class="col-md-12">
+              <div class="page-header-title">
+                <h5 class="m-b-10">Tooltips</h5>
+              </div>
+              <ul class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                <li class="breadcrumb-item"><a href="javascript: void(0)">Basic UI</a></li>
+                <li class="breadcrumb-item" aria-current="page">Tooltips</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- [ breadcrumb ] end -->
+
+
+      <!-- [ Main Content ] start -->
+      <div class="row">
+        <!-- [ tooltip ] start -->
+        <div class="col-md-6 col-sm-12">
+          <div class="card">
+            <div class="card-header">
+              <h5>Tooltip</h5>
+            </div>
+            <div class="card-body btn-page">
+              <button type="button" class="btn  btn-danger" data-bs-toggle="tooltip" data-bs-placement="top"
+                title="tooltip on top">Top</button>
+              <button type="button" class="btn  btn-primary" data-bs-toggle="tooltip" data-bs-placement="left"
+                title="tooltip on left">Left</button>
+              <button type="button" class="btn  btn-success" data-bs-toggle="tooltip" data-bs-placement="right"
+                title="tooltip on right">Right</button>
+              <button type="button" class="btn  btn-warning" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                title="tooltip on bottom">Bottom</button>
+              <button type="button" class="btn  btn-info" data-bs-toggle="tooltip" data-bs-html="true"
+                title="<em>Tooltip</em> <u>with</u> <b>HTML</b>">Html Tooltip</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <div class="card">
+            <div class="card-header">
+              <h5>Popover</h5>
+            </div>
+            <div class="card-body btn-page">
+              <button type="button" class="btn  btn-danger" data-bs-toggle="popover" data-bs-placement="top" title=""
+                data-bs-content="top by popover" data-original-title="popup on top">Top</button>
+              <button type="button" class="btn  btn-primary" data-bs-toggle="popover" data-bs-placement="left"
+                title="popup on left" data-bs-content="left by popover">Left</button>
+              <button type="button" class="btn  btn-success" data-bs-toggle="popover" data-bs-placement="right"
+                title="popup on right" data-bs-content="right by popover">Right</button>
+              <button type="button" class="btn  btn-warning" data-bs-toggle="popover" data-bs-placement="bottom"
+                title="popup on bottom" data-bs-content="bottom by popover">Bottom</button>
+              <button type="button" class="btn  btn-info" data-bs-toggle="popover" data-bs-html="true"
+                data-bs-placement="top" title="<em>popup</em> <u>with</u> <b>HTML</b>"
+                data-bs-content="popup by HTML">Html popup</button>
+            </div>
+          </div>
+        </div>
+        <!-- [ tooltip ] end -->
+      </div>
+    </div>
+  </div>
+  <!-- [ Main Content ] end -->
+{% endblock %}

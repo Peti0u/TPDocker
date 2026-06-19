@@ -1,0 +1,45 @@
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+
+      var options = {
+          series: {{ data|safe }},
+          chart: {
+          type: 'polarArea',
+          height: 350,
+        },
+        title: {
+          text: '{{ chart.description|safe }}',
+          align: 'left',
+          margin: 10,
+          offsetX: 0,
+          offsetY: 0,
+          floating: false,
+          style: {
+            fontSize: '24px',
+            color: '#BADA55'
+          },
+        },        
+        stroke: {
+          colors: ['#fff']
+        },
+        fill: {
+          opacity: 0.8
+        },
+        responsive: [{
+          breakpoint: 480,
+          options: {
+            chart: {
+              width: 200
+            },
+            legend: {
+              position: 'bottom'
+            }
+          }
+        }]
+        };
+
+        var chart = new ApexCharts(document.querySelector("#chart"), options);
+        chart.render();
+
+    });
+  </script>

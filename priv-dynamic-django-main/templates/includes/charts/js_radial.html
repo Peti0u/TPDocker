@@ -1,0 +1,49 @@
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+
+      var options = {
+          series: {{ data|safe }},
+          chart: {
+          height: 350,
+          type: 'radialBar',
+        },
+        title: {
+          text: '{{ chart.description|safe }}',
+          align: 'left',
+          margin: 10,
+          offsetX: 0,
+          offsetY: 0,
+          floating: false,
+          style: {
+            fontSize: '24px',
+            color: '#BADA55'
+          },
+        },        
+        plotOptions: {
+          radialBar: {
+            dataLabels: {
+              name: {
+                fontSize: '22px',
+              },
+              value: {
+                fontSize: '16px',
+              },
+              total: {
+                show: true,
+                label: 'Total',
+                formatter: function (w) {
+                  // By default this function returns the average of all series. The below is just an example to show the use of custom formatter function
+                  return {{ data_sum|safe }}
+                }
+              }
+            }
+          }
+        },
+        labels: {{ labels|safe }},
+        };
+
+        var chart = new ApexCharts(document.querySelector("#chart"), options);
+        chart.render();
+
+    });
+  </script>

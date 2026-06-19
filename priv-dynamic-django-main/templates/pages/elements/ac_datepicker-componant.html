@@ -1,0 +1,127 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+
+{% block title %} Date Picker {% endblock title %}
+
+{% block extrastyle %}
+  <!-- [Page specific CSS] start -->
+  <!-- Bootstrap DatePicker -->
+  <link rel="stylesheet" href="{% static 'assets/css/plugins/datepicker-bs5.min.css' %}" />
+  <!-- [Page specific CSS] end -->
+{% endblock extrastyle %}
+
+{% block content %}
+
+    <!-- [ Main Content ] start -->
+    <div class="pc-container">
+      <div class="pc-content">
+        <!-- [ breadcrumb ] start -->
+        <div class="page-header">
+          <div class="page-block">
+            <div class="row align-items-center">
+              <div class="col-md-12">
+                <div class="page-header-title">
+                  <h5 class="m-b-10">DatePicker</h5>
+                </div>
+                <ul class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="/">Home</a></li>
+                  <li class="breadcrumb-item"><a href="javascript: void(0)">Advance UI</a></li>
+                  <li class="breadcrumb-item" aria-current="page">DatePicker</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- [ breadcrumb ] end -->
+
+
+        <!-- [ Main Content ] start -->
+        <div class="row">
+          <!-- [ bootstrap-datetimepicker ] start -->
+          <div class="col-xl-4 col-md-6">
+            <div class="card">
+              <div class="card-header">
+                <h5>Days of Week Disabled</h5>
+              </div>
+              <div class="card-body">
+                <input type="text" class="form-control" id="d_week" />
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-md-6">
+            <div class="card">
+              <div class="card-header">
+                <h5>Days of Week Highlighted</h5>
+              </div>
+              <div class="card-body">
+                <input type="text" class="form-control" id="d_highlight" />
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-md-6">
+            <div class="card">
+              <div class="card-header">
+                <h5>AutoClose</h5>
+              </div>
+              <div class="card-body">
+                <input type="text" class="form-control" id="d_auto" />
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-md-6">
+            <div class="card">
+              <div class="card-header">
+                <h5>DatesDisabled</h5>
+              </div>
+              <div class="card-body">
+                <input type="text" class="form-control" id="d_disable" />
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-md-6">
+            <div class="card">
+              <div class="card-header">
+                <h5>Today Highlight</h5>
+              </div>
+              <div class="card-body">
+                <input type="text" class="form-control" id="d_today" />
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-md-6">
+            <div class="card">
+              <div class="card-header">
+                <h5>Calendar Weeks</h5>
+              </div>
+              <div class="card-body">
+                <input type="text" class="form-control" id="disp_week" />
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-8 col-md-6">
+            <div class="card">
+              <div class="card-header">
+                <h5>Date Range</h5>
+              </div>
+              <div class="card-body">
+                <div class="input-daterange input-group" id="datepicker_range">
+                  <input type="text" class="form-control text-left" placeholder="Start date" name="range-start" />
+                  <input type="text" class="form-control text-end" placeholder="End date" name="range-end" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- [ bootstrap-datetimepicker ] End -->
+        </div>
+        <!-- [ Main Content ] end -->
+      </div>
+    </div>
+    <!-- [ Main Content ] end -->
+    {% endblock content %}
+{% block extra_js %}
+  <!-- [Page Specific JS] start -->
+  <!-- DatePicker js -->
+  <script src="{% static 'assets/js/plugins/datepicker-full.min.js' %}"></script>
+  <script src="{% static 'assets/js/pages/ac-datepicker.js' %}"></script>
+  <!-- [Page Specific JS] end -->
+{% endblock extra_js %}

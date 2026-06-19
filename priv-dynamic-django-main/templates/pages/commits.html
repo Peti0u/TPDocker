@@ -1,0 +1,56 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+
+{% block title %} Commits {% endblock title %} 
+
+{% block content %}
+  <!-- [ Main Content ] start -->
+  <div class="pc-container">
+    <div class="pc-content">
+      <!-- [ breadcrumb ] start -->
+      <div class="page-header">
+        <div class="page-block">
+          <div class="row align-items-center">
+            <div class="col-md-12">
+              <div class="page-header-title">
+                <h5 class="m-b-10">Commits</h5>
+              </div>
+              <ul class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                <li class="breadcrumb-item" aria-current="page">Commits</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- [ breadcrumb ] end -->
+
+
+      <!-- [ Main Content ] start -->
+      <div class="row">
+        <!-- [ Typography ] start -->
+        <div class="col-sm-12">
+          <div class="card">
+            <div class="card-header">
+              <p>
+                The list of commits, starting form the latest 
+                </p>
+            </div>
+            <div class="card-body">
+              <div class="clearfix"></div><h5>Commit 02</h5>
+              <div class="clearfix"></div><h5>Commit 03</h5>
+              <div class="clearfix"></div><h5>Commit 04</h5>
+              <div class="clearfix"></div><h5>Commit 05</h5>
+              <div class="clearfix"></div><h5>END_HISTORY</h5>
+            </div>
+          </div>
+        </div>
+
+        <!-- [ Typography ] end -->
+      </div>
+      <!-- [ Main Content ] end -->
+    </div>
+  </div>
+  <!-- [ Main Content ] end -->
+{% endblock content %}
+    

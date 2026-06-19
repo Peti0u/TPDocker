@@ -1,0 +1,37 @@
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+
+      var options = {
+          series: [{
+          name: 'Series 1',
+          data: {{ data|safe }},
+        }],
+          chart: {
+          height: 350,
+          type: 'radar',
+        },
+        title: {
+          text: '{{ chart.description|safe }}',
+          align: 'left',
+          margin: 10,
+          offsetX: 0,
+          offsetY: 0,
+          floating: false,
+          style: {
+            fontSize: '24px',
+            color: '#BADA55'
+          },
+        },
+        yaxis: {
+          stepSize: 20
+        },
+        xaxis: {
+          categories: {{ labels|safe }}
+        }
+        };
+
+        var chart = new ApexCharts(document.querySelector("#chart"), options);
+        chart.render();
+
+    });
+  </script>

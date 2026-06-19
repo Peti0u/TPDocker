@@ -1,0 +1,368 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+
+{% block title %}Chart{% endblock title %}
+
+{% block content %}
+
+  <!-- [ Main Content ] start -->
+  <div class="pc-container">
+    <div class="pc-content">
+      <!-- [ breadcrumb ] start -->
+      <div class="page-header">
+        <div class="page-block">
+          <div class="row align-items-center">
+            <div class="col-md-12">
+              <div class="page-header-title">
+                <h5 class="m-b-10">Chart</h5>
+              </div>
+              <ul class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                <li class="breadcrumb-item"><a href="javascript: void(0)">Widget</a></li>
+                <li class="breadcrumb-item" aria-current="page">Chart</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- [ breadcrumb ] end -->
+
+
+      <!-- [ Main Content ] start -->
+      <div class="row">
+        <!-- [ sample-page ] start -->
+        <div class="col-lg-3 col-md-6">
+          <div class="card bg-primary total-card">
+            <div class="card-body">
+              <span class="text-white float-end">12%</span>
+              <div class="text-start">
+                <h3 class="text-white mb-2">4000</h3>
+                <p class="m-0 text-white">Total Sales</p>
+              </div>
+            </div>
+            <div id="total-value-graph-1"></div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="card bg-danger total-card">
+            <div class="card-body">
+              <span class="text-white float-end">15%</span>
+              <div class="text-start">
+                <h3 class="text-white mb-2">489</h3>
+                <p class="m-0 text-white">Total Comment</p>
+              </div>
+            </div>
+            <div id="total-value-graph-2"></div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="card bg-success total-card">
+            <div class="card-body">
+              <span class="text-white float-end">20%</span>
+              <div class="text-start">
+                <h3 class="text-white mb-2">$5782</h3>
+                <p class="m-0 text-white">Income Status</p>
+              </div>
+            </div>
+            <div id="total-value-graph-3"></div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="card bg-warning total-card">
+            <div class="card-body">
+              <span class="text-white float-end">23%</span>
+              <div class="text-start">
+                <h3 class="text-white mb-2">378</h3>
+                <p class="m-0 text-white">Total Visitors</p>
+              </div>
+            </div>
+            <div id="total-value-graph-4"></div>
+          </div>
+        </div>
+
+        <div class="col-xl-7">
+          <div class="card">
+            <div class="card-body">
+              <div class="row justify-content-between align-items-center">
+                <div class="col-auto">
+                  <h3>Market Share</h3>
+                </div>
+                <div class="col-auto">
+                  <h3><i class="feather icon-trending-down text-danger ms-2"></i>27, 695.65</h3>
+                </div>
+              </div>
+              <p class="mb-3">Department wise monthly sales report</p>
+              <div class="row align-items-center">
+                <div class="col-auto mb-3">
+                  <div class="d-inline-flex align-items-center">
+                    <div class="avtar bg-light-secondary">
+                      <i class="ti ti-brand-facebook text-secondary"></i>
+                    </div>
+                    <h4 class="mb-0 ms-2">+45.36%</h4>
+                  </div>
+                </div>
+                <div class="col-auto mb-3">
+                  <div class="d-inline-flex align-items-center">
+                    <div class="avtar bg-light-primary">
+                      <i class="ti ti-brand-twitter text-primary"></i>
+                    </div>
+                    <h4 class="mb-0 ms-2">- 50.69%</h4>
+                  </div>
+                </div>
+                <div class="col-auto mb-3">
+                  <div class="d-inline-flex align-items-center">
+                    <div class="avtar bg-light-danger">
+                      <i class="ti ti-brand-youtube text-danger"></i>
+                    </div>
+                    <h4 class="mb-0 ms-2">+ 16.85%</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="account-chart"></div>
+          </div>
+        </div>
+        <div class="col-xl-5">
+          <div class="card">
+            <div class="card-header">
+              <h5>Total Revenue</h5>
+            </div>
+            <div class="card-body">
+              <div id="revenue-chart"></div>
+            </div>
+            <div class="card-footer">
+              <div class="row d-flex align-items-center text-center">
+                <div class="col">
+                  <h6>Youtube</h6>
+                  <span class="text-danger">+ 16.85%</span>
+                </div>
+                <div class="col">
+                  <h6>Facebook</h6>
+                  <span class="text-primary">+45.36%</span>
+                </div>
+                <div class="col">
+                  <h6>Twitter</h6>
+                  <span class="text-secondary">- 50.69%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-12">
+          <div class="row">
+            <div class="col-md-4 col-xl-2 col-sm-6">
+              <div class="card">
+                <div class="card-body">
+                  <span>Users</span>
+                  <h3>798</h3>
+                  <div id="real4-chart"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 col-xl-2 col-sm-6">
+              <div class="card">
+                <div class="card-body">
+                  <span>Timeout</span>
+                  <h3>486</h3>
+                  <div id="real6-chart"></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-xl-2 col-sm-6">
+              <div class="card">
+                <div class="card-body">
+                  <span>Views</span>
+                  <h3>9,454</h3>
+                  <div id="real1-chart"></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-xl-2 col-sm-6">
+              <div class="card">
+                <div class="card-body">
+                  <span>Session</span>
+                  <h3>7.15</h3>
+                  <div id="real5-chart"></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-xl-2 col-sm-6">
+              <div class="card">
+                <div class="card-body">
+                  <span>Avg. Session</span>
+                  <h3>04:30</h3>
+                  <div id="real2-chart"></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-xl-2 col-sm-6">
+              <div class="card">
+                <div class="card-body">
+                  <span>Bounce Rate</span>
+                  <h3>1.55%</h3>
+                  <div id="real3-chart"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xl-4 col-md-6">
+          <div class="card overflow-hidden">
+            <div class="card-body bg-danger text-white">
+              <h5 class="text-white"
+                >Sales Per Day <span class="float-end"><i class="feather icon-trending-down"></i> 3%</span></h5
+              >
+              <div id="sale-chart1"></div>
+            </div>
+            <div class="card-footer text-center">
+              <div class="row">
+                <div class="col-6 b-r-default">
+                  <h4>$4230</h4>
+                  <p class="text-muted m-b-0">Total Revenue</p>
+                </div>
+                <div class="col-6">
+                  <h4>321</h4>
+                  <p class="text-muted m-b-0">Today Sales</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-md-6">
+          <div class="card overflow-hidden">
+            <div class="card-body bg-primary text-white">
+              <h5 class="text-white"
+                >Order Per Month<span class="float-end"><i class="feather icon-trending-up"></i> 28%</span></h5
+              >
+              <div id="sale-chart3"></div>
+            </div>
+            <div class="card-footer text-center">
+              <div class="row">
+                <div class="col-6 b-r-default">
+                  <h4>1695</h4>
+                  <p class="text-muted m-b-0">Monthly Orders</p>
+                </div>
+                <div class="col-6">
+                  <h4>52</h4>
+                  <p class="text-muted m-b-0">Today Orders</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-md-12">
+          <div class="card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-auto">
+                  <h6>Page view by device</h6>
+                </div>
+                <div class="col">
+                  <div class="dropdown float-end">
+                    <a class="dropdown-toggle text-primary" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                      >weekly</a
+                    >
+                    <div class="dropdown-menu dropdown-menu-end">
+                      <a class="dropdown-item" href="#">1 week</a>
+                      <a class="dropdown-item" href="#">2 year</a>
+                      <a class="dropdown-item" href="#">3 month</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row align-items-center">
+                <div class="col-6 pr-0">
+                  <h6 class="my-4"
+                    ><i class="feather icon-monitor f-20  text-primary"></i> 66.6%<span class="text-success ms-2 f-14"
+                      ><i class="feather icon-arrow-up"></i>2%</span
+                    >
+                  </h6>
+                  <h6 class="my-4"
+                    ><i class="feather icon-tablet f-20 text-success"></i> 29.7%<span class="text-danger ms-2 f-14"
+                      ><i class="feather icon-arrow-down"></i>3%</span
+                    >
+                  </h6>
+                  <h6 class="my-4"
+                    ><i class="feather icon-smartphone f-20 text-danger"></i> 32.8%<span class="text-success ms-2 f-14"
+                      ><i class="feather icon-arrow-up"></i>8%</span
+                    >
+                  </h6>
+                </div>
+                <div class="col-6">
+                  <div id="chart-percent" class="chart-percent text-center"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xl-4 col-md-12">
+          <div class="card">
+            <div class="card-body">
+              <h3>$16,756</h3>
+              <h6 class="text-muted mb-3">Visits<i class="fa fa-caret-down text-danger m-l-10"></i></h6>
+              <div id="seo-chart1" class="d-flex align-items-end"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <h3>49.54%</h3>
+              <h6 class="text-muted mb-3">Bounce Rate<i class="fa fa-caret-up text-success m-l-10"></i></h6>
+              <div id="seo-chart2" class="d-flex align-items-end"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <h3>1,62,564</h3>
+              <h6 class="text-muted mb-3">Products<i class="fa fa-caret-down text-danger m-l-10"></i></h6>
+              <div id="seo-chart3" class="d-flex align-items-end"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xl-6">
+          <div class="card">
+            <div class="card-body">
+              <h5>Conversions <small class="text-muted">(Purchased)</small></h5>
+              <h4 class="m-0"
+                >0.85%<span class="text-primary ms-2"><i class="feather icon-arrow-up"></i>0.50%</span></h4
+              >
+            </div>
+            <div id="coversions-chart"></div>
+          </div>
+        </div>
+        <div class="col-xl-6">
+          <div class="card">
+            <div class="card-body">
+              <h6>Customer Satisfaction</h6>
+              <div class="row d-flex justify-content-center align-items-center">
+                <div class="col">
+                  <div id="satisfaction-chart"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- [ sample-page ] end -->
+      </div>
+    </div>
+    <!-- [ Main Content ] end -->
+  </div>
+  <!-- [ Main Content ] end -->
+
+{% endblock content %}
+
+{% block extra_js %}
+  <!-- Apex Chart -->
+  <script src="{% static 'assets/js/plugins/apexcharts.min.js' %}"></script>
+  <script src="{% static 'assets/js/pages/w-chart.js' %}"></script>
+  <!-- [Page Specific JS] end -->
+{% endblock extra_js %}
+

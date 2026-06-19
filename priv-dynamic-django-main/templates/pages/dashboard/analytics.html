@@ -1,0 +1,352 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+
+{% block title %} Dashboard Analytics {% endblock title %}
+
+{% block content %}
+
+  <!-- [ Main Content ] start -->
+  <div class="pc-container">
+    <div class="pc-content">
+      <!-- [ Main Content ] start -->
+      <div class="row">
+        <!-- [ sample-page ] start -->
+        <div class="col-xl-7">
+          <div class="card">
+            <div class="card-body">
+              <div class="row justify-content-between align-items-center">
+                <div class="col-auto">
+                  <h3>Market Share</h3>
+                </div>
+                <div class="col-auto">
+                  <h3><i class="feather icon-trending-down text-danger ms-2"></i>27, 695.65</h3>
+                </div>
+              </div>
+              <p class="mb-3">Department wise monthly sales report</p>
+              <div class="row align-items-center">
+                <div class="col-auto mb-3">
+                  <div class="d-inline-flex align-items-center">
+                    <div class="avtar bg-light-secondary">
+                      <i class="ti ti-brand-facebook text-secondary"></i>
+                    </div>
+                    <h4 class="mb-0 ms-2">+45.36%</h4>
+                  </div>
+                </div>
+                <div class="col-auto mb-3">
+                  <div class="d-inline-flex align-items-center">
+                    <div class="avtar bg-light-primary">
+                      <i class="ti ti-brand-twitter text-primary"></i>
+                    </div>
+                    <h4 class="mb-0 ms-2">- 50.69%</h4>
+                  </div>
+                </div>
+                <div class="col-auto mb-3">
+                  <div class="d-inline-flex align-items-center">
+                    <div class="avtar bg-light-danger">
+                      <i class="ti ti-brand-youtube text-danger"></i>
+                    </div>
+                    <h4 class="mb-0 ms-2">+ 16.85%</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="account-chart"></div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="card bg-secondary order-card">
+                <div class="card-body">
+                  <h5 class="text-white">Revenue</h5>
+                  <h3 class="text-white">$42,562</h3>
+                  <p class="m-b-0">$50,032 Last Month</p>
+                  <i class="material-icons-two-tone d-block f-46 card-icon text-white">monetization_on</i>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card bg-primary order-card">
+                <div class="card-body">
+                  <h5 class="text-white">Orders Received</h5>
+                  <h3 class="text-white">486</h3>
+                  <p class="m-b-0">20% Increase</p>
+                  <i class="material-icons-two-tone d-block f-46 card-icon text-white">account_circle</i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card table-card">
+            <div class="card-header">
+              <h5>Latest Customers</h5>
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <div class="customers-scroll" style="height: 310px; position: relative">
+                  <table class="table table-hover table-borderless">
+                    <thead>
+                      <tr>
+                        <th></th>
+                        <th>Country</th>
+                        <th>Name</th>
+                        <th class="text-end">Average</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><img src="{% static 'assets/images/widget/GERMANY.jpg' %}" alt="" class="img-fluid wid-30" /></td>
+                        <td>Germany</td>
+                        <td>Angelina Jolly</td>
+                        <td class="text-end">56.23%</td>
+                      </tr>
+                      <tr>
+                        <td><img src="{% static 'assets/images/widget/USA.jpg' %}" alt="" class="img-fluid wid-30" /> </td>
+                        <td>USA</td>
+                        <td>John Deo</td>
+                        <td class="text-end">25.23%</td>
+                      </tr>
+                      <tr>
+                        <td><img src="{% static 'assets/images/widget/AUSTRALIA.jpg' %}" alt="" class="img-fluid wid-30" /></td>
+                        <td>Australia</td>
+                        <td>Jenifer Vintage</td>
+                        <td class="text-end">12.45%</td>
+                      </tr>
+                      <tr>
+                        <td><img src="{% static 'assets/images/widget/UK.jpg' %}" alt="" class="img-fluid wid-30" /> </td>
+                        <td>United Kingdom</td>
+                        <td>Lori Moore</td>
+                        <td class="text-end">8.65%</td>
+                      </tr>
+                      <tr>
+                        <td><img src="{% static 'assets/images/widget/BRAZIL.jpg' %}" alt="" class="img-fluid wid-30" /></td>
+                        <td>Brazil</td>
+                        <td>Allianz Dacron</td>
+                        <td class="text-end">3.56%</td>
+                      </tr>
+                      <tr>
+                        <td><img src="{% static 'assets/images/widget/AUSTRALIA.jpg' %}" alt="" class="img-fluid wid-30" /></td>
+                        <td>Australia</td>
+                        <td>Jenifer Vintage</td>
+                        <td class="text-end">12.45%</td>
+                      </tr>
+                      <tr>
+                        <td><img src="{% static 'assets/images/widget/USA.jpg' %}" alt="" class="img-fluid wid-30" /> </td>
+                        <td>USA</td>
+                        <td>John Deo</td>
+                        <td class="text-end">25.23%</td>
+                      </tr>
+                      <tr>
+                        <td><img src="{% static 'assets/images/widget/UK.jpg' %}" alt="" class="img-fluid wid-30" /> </td>
+                        <td>United Kingdom</td>
+                        <td>Lori Moore</td>
+                        <td class="text-end">8.65%</td>
+                      </tr></tbody
+                    >
+                  </table>
+                </div>
+              </div>
+              <div class="text-end m-r-20">
+                <a href="#!" class="b-b-primary text-primary">View all Latest Customers</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-5">
+          <div class="card flat-card">
+            <div class="row-table">
+              <div class="col-sm-6 card-body w-50 br">
+                <div class="row g-1">
+                  <div class="col-4">
+                    <div class="b-icons bg-light-primary">
+                      <i class="material-icons-two-tone text-secondary">share</i>
+                    </div>
+                  </div>
+                  <div class="col-8 text-md-center">
+                    <h5>1000</h5>
+                    <span>Shares</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 card-body w-50">
+                <div class="row g-1">
+                  <div class="col-4">
+                    <div class="b-icons bg-light-primary">
+                      <i class="material-icons-two-tone text-secondary">router</i>
+                    </div>
+                  </div>
+                  <div class="col-8 text-md-center">
+                    <h5>600</h5>
+                    <span>Network</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row-table">
+              <div class="col-sm-6 card-body w-50 br">
+                <div class="row g-1">
+                  <div class="col-4">
+                    <div class="b-icons bg-light-primary">
+                      <i class="material-icons-two-tone text-secondary">filter_vintage</i>
+                    </div>
+                  </div>
+                  <div class="col-8 text-md-center">
+                    <h5>3550</h5>
+                    <span>Returns</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 card-body w-50">
+                <div class="row g-1">
+                  <div class="col-4">
+                    <div class="b-icons bg-light-primary">
+                      <i class="material-icons-two-tone text-secondary">local_mall</i>
+                    </div>
+                  </div>
+                  <div class="col-8 text-md-center">
+                    <h5>100%</h5>
+                    <span>Order</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card table-card">
+            <div class="card-header borderless">
+              <h5>Total Revenue</h5>
+            </div>
+            <div class="card-body px-0 py-0">
+              <div class="table-responsive">
+                <div class="revenue-scroll" style="height: 310px; position: relative">
+                  <table class="table table-hover mb-0">
+                    <tbody>
+                      <tr>
+                        <td><i class="fas fa-caret-up text-success f-24"></i></td>
+                        <td>Bitcoin</td>
+                        <td>
+                          <h6 class="text-success">+ $145.85</h6>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><i class="fas fa-caret-down text-danger f-24"></i></td>
+                        <td>Ethereum</td>
+                        <td>
+                          <h6 class="text-danger">- $6.368</h6>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><i class="fas fa-caret-up text-success f-24"></i></td>
+                        <td>Ripple</td>
+                        <td>
+                          <h6 class="text-success">+ $458.63</h6>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><i class="fas fa-caret-down text-danger f-24"></i></td>
+                        <td>Neo</td>
+                        <td>
+                          <h6 class="text-danger">- $5.631</h6>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><i class="fas fa-caret-down text-danger f-24"></i></td>
+                        <td>Bitcoin</td>
+                        <td>
+                          <h6 class="text-danger">- $75.86</h6>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><i class="fas fa-caret-up text-success f-24"></i></td>
+                        <td>Ethereum</td>
+                        <td>
+                          <h6 class="text-success">+ $453.63</h6>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><i class="fas fa-caret-down text-danger f-24"></i></td>
+                        <td>Ripple</td>
+                        <td>
+                          <h6 class="text-danger">+ $786.63</h6>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><i class="fas fa-caret-up text-success f-24"></i></td>
+                        <td>Neo</td>
+                        <td>
+                          <h6 class="text-success">+ $145.85</h6>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><i class="fas fa-caret-down text-danger f-24"></i></td>
+                        <td>Bitcoin</td>
+                        <td>
+                          <h6 class="text-danger">- $6.368</h6>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><i class="fas fa-caret-up text-success f-24"></i></td>
+                        <td>Ethereum</td>
+                        <td>
+                          <h6 class="text-success">+ $458.63</h6>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><i class="fas fa-caret-down text-danger f-24"></i></td>
+                        <td>Neo</td>
+                        <td>
+                          <h6 class="text-danger">- $5.631</h6>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><i class="fas fa-caret-down text-danger f-24"></i></td>
+                        <td>Ripple</td>
+                        <td>
+                          <h6 class="text-danger">- $75.86</h6>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><i class="fas fa-caret-up text-success f-24"></i></td>
+                        <td>Bitcoin</td>
+                        <td>
+                          <h6 class="text-success">+ $453.63</h6>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><i class="fas fa-caret-down text-danger f-24"></i></td>
+                        <td>Ethereum</td>
+                        <td>
+                          <h6 class="text-danger">+ $786.63</h6>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card bg-secondary text-white widget-visitor-card">
+            <div class="card-body text-center">
+              <h2 class="text-white">1,658</h2>
+              <p class="text-white mb-0">Daily user</p>
+              <i class="material-icons-two-tone d-block f-46 text-white">account_circle</i>
+            </div>
+          </div>
+          <div class="card bg-primary text-white widget-visitor-card">
+            <div class="card-body text-center">
+              <h2 class="text-white">5,678</h2>
+              <p class="text-white mb-0">Daily visitor</p>
+              <i class="material-icons-two-tone d-block f-46 text-white">description</i>
+            </div>
+          </div>
+        </div>
+        <!-- [ sample-page ] end -->
+      </div>
+      <!-- [ Main Content ] end -->
+    </div>
+  </div>
+  <!-- [ Main Content ] end -->
+{% endblock content %}
+
+{% block extra_js %}
+  <!-- Apex Chart -->
+  <script src="{% static 'assets/js/plugins/apexcharts.min.js' %}"></script>
+  <script src="{% static 'assets/js/pages/dashboard-analytics.js' %}"></script>
+  <!-- [Page Specific JS] end -->
+{% endblock extra_js %}

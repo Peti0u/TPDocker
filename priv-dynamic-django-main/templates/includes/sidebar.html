@@ -1,0 +1,24 @@
+{% load static %}
+
+<!-- [ Sidebar Menu ] start -->
+<nav class="pc-sidebar">
+  <div class="navbar-wrapper">
+    <div class="m-header">
+      <a href="/" class="b-brand">
+        <!-- ========   Change your logo from here   ============ -->
+        <img src="{% static 'assets/images/logo-dark.svg' %}" alt="" class="logo logo-lg" />
+      </a>
+    </div>
+    <div class="navbar-content">
+      <ul class="pc-navbar">
+        {% include 'includes/menu-list.html' %}
+      </ul>
+      <div class="pc-navbar-card bg-primary rounded">
+        <h4 class="text-white">Explore full code</h4>
+        <p class="text-white opacity-75">Buy now to get full access of code files</p>
+        <a href="https://appseed.gumroad.com/l/devtool-dynamic-django" target="_blank" class="btn btn-light text-primary">Purchase</a>
+      </div>
+    </div>
+  </div>
+</nav>
+<!-- [ Sidebar Menu ] end -->

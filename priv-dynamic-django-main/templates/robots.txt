@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: /callback/
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /accounts/*
+
+User-agent: GPTBot
+Disallow: /
+
+Sitemap: https://dynamic-django.onrender.com/sitemap.xml

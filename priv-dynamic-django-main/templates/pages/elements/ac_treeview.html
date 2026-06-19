@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+{% extends 'layouts/base.html' %}
+{% load static %}
+
+{% block title %} Tree View {% endblock title %}
+
+{% block extrastyle %}
+  <!-- [Page specific CSS] start -->
+  <!-- jstree css -->
+  <link rel="stylesheet" href="{% static 'assets/css/plugins/vanillatree.css' %}" />
+  <!-- Page specific CSS end  -->
+{% endblock extrastyle %}
+
+{% block content %}
+
+    <!-- [ Main Content ] start -->
+    <div class="pc-container">
+      <div class="pc-content">
+        <!-- [ breadcrumb ] start -->
+        <div class="page-header">
+          <div class="page-block">
+            <div class="row align-items-center">
+              <div class="col-md-12">
+                <div class="page-header-title">
+                  <h5 class="m-b-10">Tree View</h5>
+                </div>
+                <ul class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="/">Home</a></li>
+                  <li class="breadcrumb-item"><a href="javascript: void(0)">Advance UI</a></li>
+                  <li class="breadcrumb-item" aria-current="page">Tree View</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- [ breadcrumb ] end -->
+
+
+        <!-- [ Main Content ] start -->
+        <div class="row">
+          <!-- [ rangeslider ] start -->
+          <div class="col-sm-12">
+            <div class="card">
+              <div class="card-header">
+                <h5>HTML Demo</h5>
+              </div>
+              <div class="card-body">
+                <div id="tree-demo"> </div>
+                <p id="tree-msg"></p>
+              </div>
+            </div>
+          </div>
+          <!-- [ rangeslider ] end -->
+        </div>
+        <!-- [ Main Content ] end -->
+      </div>
+    </div>
+    <!-- [ Main Content ] end -->
+{% endblock %}
+
+{% block extra_js %}
+  <!-- [Page Specific JS] start -->
+  <!-- jstree Js -->
+  <script src="{% static 'assets/js/plugins/vanillatree.min.js' %}"></script>
+  <script src="{% static 'assets/js/pages/ac-treeview.js' %}"></script>
+  <!-- [Page Specific JS] end -->
+{% endblock extra_js %}

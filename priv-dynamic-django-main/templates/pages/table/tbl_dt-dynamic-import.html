@@ -1,0 +1,69 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+
+{% block title %}Dynamic Import{% endblock title %}
+
+{% block content %}
+
+  <!-- [ Main Content ] start -->
+  <section class="pc-container">
+    <div class="pc-content">
+      <!-- [ breadcrumb ] start -->
+      <div class="page-header">
+        <div class="page-block">
+          <div class="row align-items-center">
+            <div class="col-md-12">
+              <div class="page-header-title">
+                <h5 class="m-b-10">Dynamic Import</h5>
+              </div>
+              <ul class="breadcrumb">
+                <li class="breadcrumb-item"><a href="../navigation/index.html">Home</a></li>
+                <li class="breadcrumb-item"><a href="javascript: void(0)">Table</a></li>
+                <li class="breadcrumb-item" aria-current="page">Dynamic Import</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- [ breadcrumb ] end -->
+
+
+      <!-- [ Main Content ] start -->
+      <div class="row">
+        <!-- [ basic-table ] start -->
+        <div class="col-xl-12">
+          <div class="card">
+            <div class="card-header">
+              <h5>Dynamic Import</h5>
+            </div>
+            <div class="card-body table-border-style">
+              <div class="table-responsive">
+                <table class="table" id="pc-dt-dynamic-import"> </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- [ basic-table ] end -->
+      </div>
+      <!-- [ Main Content ] end -->
+    </div>
+  </section>
+  <!-- [ Main Content ] end -->
+{% endblock content %}
+
+{% block extra_js %}
+
+  <script src="{% static 'assets/js/plugins/simple-datatables.js' %}"></script>
+  <script>
+    var dataTable = new simpleDatatables.DataTable('#pc-dt-dynamic-import');
+    dataTable.import({
+      type: "csv",
+      data: "Heading 1,Heading 2,Heading 3|Value 1,Value 2,Value 3|Value 4,Value 5,Value 6",
+      headings: true,
+      lineDelimiter: "|",
+      columnDelimiter: ","
+    });
+
+  </script>
+
+{% endblock extra_js %}

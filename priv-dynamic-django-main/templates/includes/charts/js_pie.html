@@ -1,0 +1,40 @@
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+
+        var options = {
+          series: {{ chart_js_data|safe }},
+          chart: {
+          height: 350,
+          type: 'pie',
+        },
+        title: {
+          text: '{{ chart.description|safe }}',
+          align: 'left',
+          margin: 10,
+          offsetX: 0,
+          offsetY: 0,
+          floating: false,
+          style: {
+            fontSize: '24px',
+            color: '#BADA55'
+          },
+        },        
+        labels: {{ chart_js_labels|safe }},
+        responsive: [{
+          breakpoint: 480,
+          options: {
+            chart: {
+              width: 200
+            },
+            legend: {
+              position: 'bottom'
+            }
+          }
+        }]
+        };
+
+        var chart = new ApexCharts(document.querySelector("#chart"), options);
+        chart.render();
+
+    });
+  </script>

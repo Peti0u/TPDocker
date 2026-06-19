@@ -1,0 +1,107 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+
+{% block title %} Notification {% endblock title %}
+
+{% block extrastyle %}
+  <!-- [Page specific CSS] start -->
+  <!-- notification css -->
+  <link rel="stylesheet" href="{% static 'assets/css/plugins/notifier.css' %}" />
+  <!-- [Page specific CSS] end -->
+{% endblock extrastyle %}
+
+{% block content %}
+
+
+
+    <!-- [ Main Content ] start -->
+    <section class="pc-container">
+      <div class="pc-content">
+        <!-- [ breadcrumb ] start -->
+        <div class="page-header">
+          <div class="page-block">
+            <div class="row align-items-center">
+              <div class="col-md-12">
+                <div class="page-header-title">
+                  <h5 class="m-b-10">Notifications</h5>
+                </div>
+                <ul class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="/">Home</a></li>
+                  <li class="breadcrumb-item"><a href="javascript: void(0)">Advance UI</a></li>
+                  <li class="breadcrumb-item" aria-current="page">Notifications</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- [ breadcrumb ] end -->
+
+
+        <!-- [ Main Content ] start -->
+        <div class="row">
+          <!-- [ single-light ] start -->
+          <div class="col-sm-12">
+            <div class="card">
+              <div class="card-header">
+                <h5>Notification Alert</h5>
+              </div>
+              <div class="card-body btn-page">
+                <button type="button" class="btn btn-primary" id="btn-default">Default</button>
+                <button type="button" class="btn btn-info" id="btn-info">Info</button>
+                <button type="button" class="btn btn-success" id="btn-success">Success</button>
+                <button type="button" class="btn btn-warning" id="btn-warning">Warning</button>
+                <button type="button" class="btn btn-danger" id="btn-danger">Danger</button>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">
+                <h5>Notification with Icons</h5>
+              </div>
+              <div class="card-body btn-page">
+                <button type="button" class="btn btn-primary" id="btn-default-i">Default</button>
+                <button type="button" class="btn btn-info" id="btn-info-i">Info</button>
+                <button type="button" class="btn btn-success" id="btn-success-i">Success</button>
+                <button type="button" class="btn btn-warning" id="btn-warning-i">Warning</button>
+                <button type="button" class="btn btn-danger" id="btn-danger-i">Danger</button>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">
+                <h5>Auto Close Notifications</h5>
+              </div>
+              <div class="card-body btn-page">
+                <button type="button" class="btn btn-primary" id="btn-default-ac">Default</button>
+                <button type="button" class="btn btn-info" id="btn-info-ac">Info</button>
+                <button type="button" class="btn btn-success" id="btn-success-ac">Success</button>
+                <button type="button" class="btn btn-warning" id="btn-warning-ac">Warning</button>
+                <button type="button" class="btn btn-danger" id="btn-danger-ac">Danger</button>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">
+                <h5>Using the notification.hide() method</h5>
+              </div>
+              <div class="card-body btn-page">
+                <button type="button" class="btn btn-primary" id="btn-nt-show">Show Notification</button>
+                <button type="button" class="btn btn-danger" id="btn-nt-hide">Hide Notification</button>
+              </div>
+            </div>
+          </div>
+          <!-- [ single-light ] end -->
+        </div>
+        <!-- [ Main Content ] end -->
+      </div>
+    </section>
+    <!-- [ Main Content ] end -->
+{% endblock %}
+
+{% block extra_js %}
+
+    <!-- [Page Specific JS] start -->
+    <!-- notification Js -->
+    <script src="{% static 'assets/js/plugins/notifier.js' %}"></script>
+    <script src="{% static 'assets/js/pages/ac-notification.js' %}"></script>
+
+    <!-- [Page Specific JS] end -->
+
+{% endblock extra_js %}

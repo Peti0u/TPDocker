@@ -1,0 +1,43 @@
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+
+      var options = {
+          series: [{
+            data: {{ chart_js_y|safe }}
+        }],
+          chart: {
+          type: 'bar',
+          height: 350
+        },
+        title: {
+          text: '{{ chart.description|safe }}',
+          align: 'left',
+          margin: 10,
+          offsetX: 0,
+          offsetY: 0,
+          floating: false,
+          style: {
+            fontSize: '24px',
+            color: '#BADA55'
+          },
+        },        
+        plotOptions: {
+          bar: {
+            borderRadius: 4,
+            borderRadiusApplication: 'end',
+            horizontal: true,
+          }
+        },
+        dataLabels: {
+          enabled: false
+        },
+        xaxis: {
+          categories: {{ chart_js_x|safe }},
+        }
+        };
+
+        var chart = new ApexCharts(document.querySelector("#chart"), options);
+        chart.render();
+
+    });
+  </script>
