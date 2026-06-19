@@ -10,5 +10,5 @@ services:
       timeout: 5s
       retries: 3
     depends_on:
-      rocket-ecommerce-BV-19-06-2026:
+      db-BV-19-06-2026:
         condition: service_healthy
