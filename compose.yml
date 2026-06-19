@@ -4,4 +4,5 @@ include:
   - ./nginx/compose.yml
   - ./rocket-ecommerce/compose.yml
   - ./website/compose.yml
+  - ./netdata/compose.yml
 
