@@ -1,0 +1,20 @@
+services:
+  db:
+    image: mariadb:10.11
+    container_name: wp_database
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 2026
+      MYSQL_DATABASE: Wearo
+      MYSQL_USER: wearo
+      MYSQL_PASSWORD: 2026
+    volumes:
+      - db_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  db_data:
