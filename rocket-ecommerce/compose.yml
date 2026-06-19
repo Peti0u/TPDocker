@@ -4,11 +4,11 @@ services:
     build: .
     image: rocket-ecommerce-bv-19-06-2026
     restart: always
-  healthcheck:
+    healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:5001"]
       interval: 10s
       timeout: 5s
       retries: 3
     depends_on:
-      db-BV-19-06-2026:
+      db:
         condition: service_healthy
