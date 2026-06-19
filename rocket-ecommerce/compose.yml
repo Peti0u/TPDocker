@@ -1,5 +1,6 @@
 services:
   rocket-ecommerce:
-    container_name: rocket-ecommerce
+    container_name: rocket-ecommerce-BV-19-06-2026
     build: .
+    image: rocket-ecommerce-bv-19-06-2026
     restart: always
