@@ -1,8 +1,10 @@
-FROM python:3.11.5-slim
+FROM python:3.11.5
 
 # set environment variables
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
+ARG DB_ENGINE
+ENV DB_ENGINE=${DB_ENGINE}
 
 COPY requirements.txt .
 # install python dependencies
@@ -27,6 +29,8 @@ RUN set -uex; \
 # Install modules and webpack
 RUN npm i
 RUN npm run build
+
+RUN pip install mysqlclient
 
 # Manage Assets & DB 
 RUN python manage.py collectstatic --no-input 

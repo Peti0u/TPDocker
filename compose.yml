@@ -5,5 +5,5 @@ include:
   - ./rocket-ecommerce/compose.yml
   - ./website/compose.yml
   - ./netdata/compose.yml
-  - ./Bdd/compose.yml
+  - ./db/compose.yml
 
